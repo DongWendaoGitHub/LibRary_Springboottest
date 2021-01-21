@@ -29,6 +29,7 @@ public class BookHandler {
         return bookRepository.findAll(pageable);
     }
 
+    /*增加   post*/
     @PostMapping("/save")
     public String save(@RequestBody Book book){
         Book result = bookRepository.save(book);

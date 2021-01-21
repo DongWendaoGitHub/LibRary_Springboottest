@@ -33,9 +33,9 @@ public class BookHandler {
     public String save(@RequestBody Book book){
         Book result = bookRepository.save(book);
         if(result != null){
-            return "success";
+            return "创建成功";
         }else{
-            return "error";
+            return "创建失败";
         }
     }
 

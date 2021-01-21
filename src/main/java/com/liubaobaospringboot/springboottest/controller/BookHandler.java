@@ -40,6 +40,7 @@ public class BookHandler {
         }
     }
 
+    /*寻找id*/
     @GetMapping("/findById/{id}")
     public Book findById(@PathVariable("id") Integer id){
         return bookRepository.findById(id).get();

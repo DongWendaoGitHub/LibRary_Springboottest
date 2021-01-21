@@ -22,7 +22,7 @@ public class BookHandler {
     public List<Book> findAll(){
         return bookRepository.findAll();
     }*/
-   /*按照页面查询*/
+   /*按照页面去查询*/
     @GetMapping("/findAll/{page}/{size}")
     public Page<Book> findAll(@PathVariable("page") Integer page,@PathVariable("size") Integer size) {
         Pageable pageable = PageRequest.of(page-1, size);
